@@ -1,15 +1,24 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <mi-navbar></mi-navbar>
+    <div id="app-body">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
+  import Navbar from './components/Layouts/Navbar'
   export default {
-    name: 'mi-notes'
+    name: 'mi-notes',
+    components: {
+      'mi-navbar': Navbar
+    }
   }
 </script>
 
-<style>
-  /* CSS */
+<style scoped>
+  #app-body {
+    margin: 60px 20px 0 20px;
+  }
 </style>
